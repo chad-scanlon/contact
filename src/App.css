@@ -1,0 +1,22 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    height: 50px;
+    width: 140px;
+    border-radius: 10%;
+    margin-left: 2%;
+    margin-top: 5%;
+    background-color: #1699d5;
+    color: #f1f1f1;
+    font-size: 1.2rem;
+    font-family: Arial black;
+}
+.button:hover {
+    color: #1699d5;
+    background-color: #f1f1f1;
+}
