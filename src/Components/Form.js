@@ -10,6 +10,7 @@ import {
     StyledButton,
 } from "../styles/formStyles";
 
+// set up form validation
 const formSchema = yup.object().shape({
     name: yup.string().required("please enter a name"),
     email: yup.string().email().required("please enter a valid email address"),
@@ -38,6 +39,7 @@ const Form = () => {
         birthday: "",
         emailConsent: "",
     });
+    // button enabling and validation
     const [buttonDisabled, setButtonDisabled] = useState(true);
     useEffect(() => {
         formSchema.isValid(formState).then((valid) => {
@@ -61,7 +63,7 @@ const Form = () => {
                 });
             });
     };
-
+    // input changes
     const handleChange = (event) => {
         event.persist();
         const newFormData = {
@@ -74,6 +76,7 @@ const Form = () => {
         validateChange(event);
         setFormState(newFormData);
     };
+    // form submission
     const handleSubmit = (event) => {
         event.preventDefault();
         axios
