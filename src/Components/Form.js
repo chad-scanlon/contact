@@ -82,8 +82,8 @@ const Form = () => {
                 formState
             )
             .then((response) => {
-                console.log(response);
                 setUser(response.data);
+                alert("Thank you for contacting us!");
                 setFormState({
                     name: "",
                     email: "",
